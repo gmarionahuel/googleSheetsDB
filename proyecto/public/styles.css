@@ -1,0 +1,64 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+.btn-editar, .btn-eliminar {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .btn-editar i {
+    color: #ffc107; /* Color de lápiz */
+  }
+  
+  .btn-eliminar i {
+    color: #dc3545; /* Color de la X */
+  }
+  
+  /* Estilos adicionales para botones si es necesario */
+  button {
+    padding: 5px 10px; /* Reducir el padding para hacer los botones más pequeños */
+    margin: 0 5px; /* Añadir un poco de margen entre botones */
+  }
+
+  .fa-pencil-alt, .fa-trash-alt {
+    cursor: pointer;
+    margin: 0 5px;
+    color: #777; /* Elige tu color preferido */
+    font-size: 16px; /* Ajusta el tamaño del ícono como desees */
+  }
+  
+  /* Añade :hover para una mejor interacción del usuario */
+  .fa-pencil-alt:hover {
+    color: #ffc107;
+  }
+  
+  .fa-trash-alt:hover {
+    color: #dc3545;
+  }
