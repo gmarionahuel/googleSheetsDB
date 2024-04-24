@@ -41,20 +41,18 @@ tr:nth-child(even) {
     color: #dc3545; /* Color de la X */
   }
   
-  /* Estilos adicionales para botones si es necesario */
   button {
-    padding: 5px 10px; /* Reducir el padding para hacer los botones más pequeños */
-    margin: 0 5px; /* Añadir un poco de margen entre botones */
+    padding: 5px 10px; 
+    margin: 0 5px; 
   }
 
   .fa-pencil-alt, .fa-trash-alt {
     cursor: pointer;
     margin: 0 5px;
-    color: #777; /* Elige tu color preferido */
-    font-size: 16px; /* Ajusta el tamaño del ícono como desees */
+    color: #777; 
+    font-size: 16px; 
   }
   
-  /* Añade :hover para una mejor interacción del usuario */
   .fa-pencil-alt:hover {
     color: #ffc107;
   }
