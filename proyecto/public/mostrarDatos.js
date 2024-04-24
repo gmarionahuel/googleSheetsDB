@@ -1,3 +1,4 @@
+// mostrarDatos.js en el cliente
 async function mostrarDatosEnTabla() {
     try {
         const response = await fetch('http://localhost:5000/api/turnos');
@@ -19,21 +20,7 @@ async function mostrarDatosEnTabla() {
                 const celda = fila.insertCell();
                 celda.textContent = dato;
             });
-            let editarCelda = fila.insertCell();
-editarCelda.classList.add('editar-celda');
-
-let editarIcono = document.createElement('i');
-editarIcono.className = 'fas fa-pencil-alt';
-editarIcono.onclick = function() { editarTurno(numeroDeFila); };
-editarCelda.appendChild(editarIcono);
-
-let eliminarCelda = fila.insertCell();
-eliminarCelda.classList.add('eliminar-celda'); 
-
-let eliminarIcono = document.createElement('i');
-eliminarIcono.className = 'fas fa-trash-alt';
-eliminarIcono.onclick = function() { eliminarTurno(numeroDeFila); };
-eliminarCelda.appendChild(eliminarIcono);
+            
         });
     } catch (error) {
         console.error('Error al cargar los datos:', error);
