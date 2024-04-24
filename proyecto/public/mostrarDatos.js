@@ -1,4 +1,3 @@
-// mostrarDatos.js en el cliente
 async function mostrarDatosEnTabla() {
     try {
         const response = await fetch('http://localhost:5000/api/turnos');
@@ -13,7 +12,6 @@ async function mostrarDatosEnTabla() {
         datosTurnos.forEach(turno => {
             const fila = tablaTurnos.insertRow();
 
-            // Extrae el número de fila del final del array de turno
             const numeroDeFila = turno.pop(); 
             fila.setAttribute('row-number', numeroDeFila);
 
@@ -22,7 +20,7 @@ async function mostrarDatosEnTabla() {
                 celda.textContent = dato;
             });
             let editarCelda = fila.insertCell();
-editarCelda.classList.add('editar-celda'); // Añade la clase para aplicar estilos
+editarCelda.classList.add('editar-celda');
 
 let editarIcono = document.createElement('i');
 editarIcono.className = 'fas fa-pencil-alt';
@@ -30,7 +28,7 @@ editarIcono.onclick = function() { editarTurno(numeroDeFila); };
 editarCelda.appendChild(editarIcono);
 
 let eliminarCelda = fila.insertCell();
-eliminarCelda.classList.add('eliminar-celda'); // Añade la clase para aplicar estilos
+eliminarCelda.classList.add('eliminar-celda'); 
 
 let eliminarIcono = document.createElement('i');
 eliminarIcono.className = 'fas fa-trash-alt';
